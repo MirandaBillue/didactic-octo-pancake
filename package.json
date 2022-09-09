@@ -1,5 +1,5 @@
 {
-  "name": "didactic-octo-pancake",
+  "name": "sucre-10",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MirandaBillue/didactic-octo-pancake.git"
+    "url": "git+https://github.com/MirandaBillue/sucre-10.git"
   },
   "author": "Miranda Billue",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MirandaBillue/didactic-octo-pancake/issues"
+    "url": "https://github.com/MirandaBillue/sucre-10/issues"
   },
-  "homepage": "https://github.com/MirandaBillue/didactic-octo-pancake#readme",
+  "homepage": "https://github.com/MirandaBillue/sucre-10#readme",
   "dependencies": {
     "dotenv": "^16.0.2",
     "ejs": "^3.1.8",
