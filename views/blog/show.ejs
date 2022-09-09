@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Sucré Blog</title>
+</head>
+
+<body>
+    <header>
+        <h1> <%= blog.title %> </h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">HOME</a>
+                </li>
+                <li>
+                    <a href="/blog">BLOG MAIN PAGE</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <%= blog.body %>
+    </div>
+</body>
+
+</html>

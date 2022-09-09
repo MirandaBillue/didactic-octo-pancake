@@ -31,7 +31,13 @@ router.post('/', (req, res) => {
 
 
 /// Show
-
+router.get('/:id', (req, res) => {
+	Blog.findById(req.params.id, (err, foundBlog) => {
+		res.render('blog/show.ejs', {
+			blog: foundBlog
+		});
+	});
+});
 
 
 
