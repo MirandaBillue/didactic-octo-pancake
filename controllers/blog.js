@@ -23,7 +23,11 @@ router.delete('/:id', (req, res) => {
 	});
 });
 ///Update
-
+router.put('/:id', (req, res) => {
+	Blog.findByIdAndUpdate(req.params.id, req.body, () => {
+		res.redirect('/blog');
+	});
+});
 ///Create
 router.post('/', (req, res) => {
 	Blog.create(req.body, (err, createdBlog) => {
@@ -38,7 +42,6 @@ router.get('/:id/edit', (req, res) => {
 		});
 	});
 });
-
 /// Show
 router.get('/:id', (req, res) => {
 	Blog.findById(req.params.id, (err, foundBlog) => {

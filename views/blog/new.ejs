@@ -8,7 +8,7 @@
 
 <body>
     <header>
-        <h1>Write us a Blog</h1>
+        <h1>Blog About Us!</h1>
         <nav>
             <ul>
                 <li>
@@ -20,6 +20,14 @@
             </ul>
         </nav>
     </header>
+    <div class="container">
+        <form action="/products" method="POST">
+        Title: <input type="text" name="title" /><br />
+        Image: <input type="file" name="img"/><br />
+        Body:<input type="text" name="body" /><br />
+        <input type="submit" name="" value="Add Post" />
+    </form>
+    </div>
 </body>
 
 </html>
