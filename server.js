@@ -6,6 +6,7 @@ const mongoose = require ('mongoose');
 const app = express();
 const db = mongoose.connection;
 const menuController = require('./controllers/menu.js');
+const blogController = require('./controllers/blog.js');
 
 ///Port
 const PORT = process.env.PORT || 3000;
@@ -29,6 +30,7 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
 /// Routes
 app.use('/menu', menuController);
+app.use('/blog', blogController);
 
 app.get('/' , (req, res) => {
   res.render('index.ejs')
