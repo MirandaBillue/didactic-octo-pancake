@@ -6,7 +6,7 @@ const Blog = require('../models/blog.js');
 ///Routers
 ///Index
 router.get('/', (req, res) => {
-    Blog.find({}, (err, foundBlog)=> {
+    Blog.find({}, (err, foundBlogs)=> {
         res.render('blog/index.ejs', {
             blogs: foundBlogs
         });
@@ -31,7 +31,13 @@ router.post('/', (req, res) => {
 	});
 });
 ///Edit
-
+router.get('/:id/edit', (req, res) => {
+	Blog.findById(req.params.id, (err, foundBlog) => {
+		res.render('blog/edit.ejs', {
+			blog: foundBlog
+		});
+	});
+});
 
 /// Show
 router.get('/:id', (req, res) => {

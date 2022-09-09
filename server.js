@@ -36,7 +36,6 @@ app.get('/' , (req, res) => {
   res.render('index.ejs')
 });
 
-
 ///Listener
 app.listen(PORT, () => console.log('express is listening on:', PORT));
 
