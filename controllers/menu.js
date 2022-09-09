@@ -42,9 +42,9 @@ router.get('/:id/edit', (req, res) => {
     });
 });
 ///Show
-router.get('/', (req, res) => {
-    Menu.find({}, (err, foundMenu) => {
-        res.render('menu/index.ejs', {
+router.get('/:id', (req, res) => {
+    Menu.findById(req.params.id, (err, foundMenu) => {
+        res.render('menu/show.ejs', {
             menu: foundMenu
         });
     })

@@ -8,26 +8,29 @@
 
 <body>
     <header>
-        <h1>Menu</h1>
         <nav>
+            <h1>Menu</h1>
             <ul>
                 <li>
                     <a href="/">HOME</a>
                 </li>
-               
+
             </ul>
         </nav>
     </header>
-<main>
-    <h2>Menu Items</h2>
-    <ul>
-        <% for(let i=0; i < menus.length; i++){ %>
-        <li>
-            <a href="/menu/<%= menus[i]._id %>"><%= menus[i].name %></a>
-        </li>
-        <% } %>
-    </ul>
-</main>
+    <main>
+        <h2>Menu Items</h2>
+        <ul>
+            <% for(let i=0; i < menus.length; i++){ %>
+                <li>
+                    <a href="/menu/<%= menus[i]._id %>">
+                        <img src=<%= menus[i].image %>/>
+                    </a>
+                </li>
+                
+                <% } %>
+        </ul>
+    </main>
 </body>
 
 </html>
