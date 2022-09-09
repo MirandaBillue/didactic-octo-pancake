@@ -17,8 +17,11 @@ router.get('/new', (req, res)=> {
     res.render('blog/new.ejs');
 });
 ///Delete
-
-
+router.delete('/:id', (req, res) => {
+	Blog.findByIdAndRemove(req.params.id, () => {
+		res.redirect('/blog');
+	});
+});
 ///Update
 
 ///Create
