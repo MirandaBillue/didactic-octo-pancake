@@ -1,11 +1,16 @@
 ///Dependencies
 const express = require('express');
 const router = express.Router();
+const Blog = require('../models/blog.js');
 
 ///Routers
 ///Index
 router.get('/', (req, res) => {
-	res.render('blog/index.ejs');
+    Blog.find({}, (err, foundBlog)=> {
+        res.render('blog/index.ejs', {
+            blogs: foundBlogs
+        });
+    });
 });
 ///New
 router.get('/new', (req, res)=> {
@@ -17,8 +22,11 @@ router.get('/new', (req, res)=> {
 ///Update
 
 ///Create
-
-
+router.post('/', (req, res) => {
+	Blog.create(req.body, (err, createdBlog) => {
+		res.redirect('/blog');
+	});
+});
 ///Edit
 
 

@@ -20,6 +20,16 @@
             </ul>
         </nav>
     </header>
+    <main>
+        <h2>POSTS</h2>
+        <ul>
+            <% for(let i = 0; i < articles.length; i++){ %>
+            <li>
+                <a href="/blog/<%=blogs[i]._id%>"><%= blogs[i].title %></a>
+            </li>
+            <% } %>
+        </ul>
+    </main>
 </body>
 
 </html>
