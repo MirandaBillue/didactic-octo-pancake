@@ -32,13 +32,14 @@
           </nav>
     </header>
     <main>
-        <h2>Menu Items</h2>
-        <ul>
+        <h1 id="mindex">Menu Items</h1>
+        <ul id="menu">
             <% for(let i=0; i < menus.length; i++){ %>
-                <li>
+                <li id="menuli">
                     <a href="/menu/<%= menus[i]._id %>">
                         <img src=<%= menus[i].image %>/>
                     </a>
+                    <%= menus[i].name %>
                 </li>
                 
                 <% } %>

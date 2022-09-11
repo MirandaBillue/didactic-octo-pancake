@@ -32,10 +32,10 @@
           </nav>
     </header>
    <div class="container">
-            <h1><%= menu.name %></h1>
+            <h1 id="showmenu"><%= menu.name %></h1>
             <img src=<%= menu.image %></li>
-            <p>Description: <%= menu.description %></p>
-           <p>Price: <%= menu.price %></p>
+            <p id="pmenu">Description: <%= menu.description %></p>
+           <p id="pmenu">Price: <%= menu.price %></p>
            <form action="/menu/<%= menu._id %>?_method=DELETE" method="POST">
             <input type="submit" value="Delete Item" />
         </form>
