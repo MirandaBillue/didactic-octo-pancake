@@ -4,11 +4,6 @@ const bcrypt = require('bcrypt');
 const sessionsRouter = express.Router();
 const User = require('../models/user.js');
 
-const currentUser = {email:
-"student334455@yahoo.com",
-password:
-"Abc1234"}
-
 // New (login page)
 sessionsRouter.get('/new', (req, res) => {
 	res.render('sessions/new.ejs', {
@@ -51,7 +46,7 @@ sessionsRouter.post('/', (req, res) => {
         }
     });
 });
-
+//Dashboard
 sessionsRouter.get('/dashboard', (req, res) => {
     if (req.session.currentUser) {
     res.render('/dashboard.ejs', {

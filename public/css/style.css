@@ -1,11 +1,31 @@
+/* Index */
 #main {
     font-size: 300px;
     font-family: 'Abril Fatface', cursive;
 }
-
-
-
-
+/* Dashboard */
+#dash {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 100px;
+}
+#well {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 40px;
+}
+/* Login */
+#login {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 100px;
+}
+/* Register */
+#register {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 100px;
+}
+#reg {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 50px;
+}
 
 
 
