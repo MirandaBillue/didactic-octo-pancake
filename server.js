@@ -7,6 +7,9 @@ const app = express();
 const db = mongoose.connection;
 const menuController = require('./controllers/menu.js');
 const blogController = require('./controllers/blog.js');
+const session = require('express-session');
+const userController = require('./controllers/users');
+const sessionsController = require('./controllers/sessions');
 
 ///Port
 const PORT = process.env.PORT || 3000;
@@ -22,17 +25,33 @@ db.on('disconnected', () => console.log('mongod disconnected'));
 
 //Middleware
 // populates req.body with parsed info from forms - if no data from forms will return an empty object {}
-app.use(express.urlencoded({ extended: false }));// extended: false - does not allow nested objects in query strings
+app.use(express.urlencoded({ extended: true }));// extended: false - does not allow nested objects in query strings
 app.use(express.json());// returns middleware that only parses JSON - may or may not need it depending on your project
-app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 app.use(express.static(__dirname + '/public'));
+app.use(
+  session({
+      secret: process.env.SECRET,
+      resave: false,
+      saveUninitialized: false
+  }));
+app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
 /// Routes
 app.use('/menu', menuController);
 app.use('/blog', blogController);
+app.use('/users', userController);
+app.use('/sessions', sessionsController);
 
-app.get('/' , (req, res) => {
-  res.render('index.ejs')
+app.get('/', (req, res) => {
+  if (req.session.currentUser) {
+  res.render('dashboard.ejs', {
+    currentUser: req.session.currentUser
+  });
+} else {
+res.render('index.ejs', {
+      currentUser: req.session.currentUser
+      });
+  }
 });
 
 ///Listener
