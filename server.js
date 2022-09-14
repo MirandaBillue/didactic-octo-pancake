@@ -25,7 +25,7 @@ db.on('disconnected', () => console.log('mongod disconnected'));
 
 //Middleware
 // populates req.body with parsed info from forms - if no data from forms will return an empty object {}
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());// returns middleware that only parses JSON - may or may not need it depending on your project
 app.use(express.static(__dirname + '/public'));
 app.use(

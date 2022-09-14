@@ -32,12 +32,11 @@
           </nav>
         <h1 id="medit">Edit <%= menu.name %></h1>
     </header>
-         
-        <form action="/menu/<%= menu._id %>?_method=PUT" method="POST">
+            <form action="/menu/<%= menu._id %>?_method=PUT" method="POST">
             <input type="text" name="name" value="<%= menu.name %>" /><br />
             <input type="submit" value="Update Item" />
         </form>
-
+        <%- include('../partials/footer.ejs') %>
 </body>
 
 </html>

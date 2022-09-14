@@ -11,6 +11,8 @@
 
 <body>
     <header>
+      
+      <h1 id="blogindex">the SUCRÉ blog</h1>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">SUCRÉ</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +31,13 @@
           </nav>
     </header>
     <main>
-        <h1 id="blogindex">the SUCRÉ blog</h1>
+        
+        <img id="imageb" src="https://imgur.com/Zv34ON9l.jpg" alt="">
+        <p id="blogp">Welcome to our blog!  We will in general overlook that satisfaction doesn't originate from something we don't have, yet rather of perceiving and acknowledging what we do… Satisfaction is fellowship… Joy is festivity. It's tied in with acquiring bliss and praising life.
+          Spreading bliss and commending each snapshot of life is the mantra at Sucré. Sucré started their endeavor with Handmade Chocolates and gradually moved into Cakes, Pastries, and unified items.
+          Everything started with taking up little gathering requests. With the progression of time, we moved to counters in markets and now have 50 outlets in the city of Atlanta. Sucré develops with each passing day and connecting with individuals and adding to mind-blowing festivals.        
+          In 2015 Sucré wandered into advancement and innovativeness and presented productive Birthday Cakes, Customized Wedding Cakes, and Theme Cakes according to events. Sucré expects to be the main Cake Store regarding quality, benefit, esteem for cash, and consumer loyalty.
+           </p>
         <ul>
             <% for(let i = 0; i < blogs.length; i++){ %>
             <li>
@@ -38,6 +46,7 @@
             <% } %>
         </ul>
     </main>
+    <%- include('../partials/footer.ejs') %>
 </body>
 
 </html>

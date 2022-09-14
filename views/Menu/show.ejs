@@ -9,7 +9,7 @@
     <title>Sucré Menu</title>
 </head>
 
-<body>
+<body id="mbshow">
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">SUCRÉ</a>
@@ -42,7 +42,7 @@
         <a href="/menu/<%= menu._id %>/edit">Edit Item</a>
         <a href="/menu/new">Add New Item</a>
         </div>
-
+        <%- include('../partials/footer.ejs') %>
 </body>
 
 </html>

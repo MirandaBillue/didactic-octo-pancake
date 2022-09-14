@@ -30,13 +30,14 @@
         <h1 id="blognew">Blog About Us!</h1>
     </header>
     <div class="container">
-        <form id="blog" action="/products" method="POST">
+        <form id="blog" action="/blog" method="POST">
         Title: <input type="text" name="title" /><br />
         Image: <input type="file" name="img"/><br />
         Body:<input type="text" name="body" /><br />
         <input type="submit" name="" value="Add Post" />
     </form>
     </div>
+    <%- include('../partials/footer.ejs') %>
 </body>
 
 </html>

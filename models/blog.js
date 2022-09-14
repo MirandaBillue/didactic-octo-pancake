@@ -5,6 +5,8 @@ const blogSchema = new Schema({
     title: {type:String, required:true},
     image: String,
     body: String
+ }, {
+        timestamps: true
 });
 
 const Blog = mongoose.model('Blog', blogSchema);

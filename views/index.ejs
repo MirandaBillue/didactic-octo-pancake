@@ -12,7 +12,7 @@
 </head>
 <body id="index">
       <header>
-   <%- include('./partials/nav.ejs') %>
+  
    </header> 
     <div id="appindex">
         <div class="titleindex">
@@ -21,10 +21,15 @@
               <div class="cafe-inner">SUCRÉ</div>
             </div>
         </div>
+        <%- include('./partials/nav.ejs') %>
+        <div class="cafesub">
+            <div class="cafe-inner-sub">Fresh Baked Delicous Sweets!</div>
+          </div>
              <div class="imageindex">
-          <img src='https://i.imgur.com/VflKUQPh.jpg' alt=''>
+          <img id="imagein" src='https://i.imgur.com/VflKUQPh.jpg' alt=''>
         </div>
       </div>
-      
+      <%- include('./partials/footer.ejs')  %> 
 </body>
+
 </html>
