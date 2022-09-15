@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -9,44 +8,26 @@
   <link rel="stylesheet" href="/css/style.css" type="text/css" />
   <title>Sucré Menu</title>
 </head>
-
 <body id="mbody">
   <h1 id="mindex">Menu Items</h1>
   <header>
     <%- include('../partials/nav.ejs') %>
   </header>
   <main>
-    <div class="row">
-      <div class="column">
-        <% for(let i=0; i < menus.length; i++){ %>
-          <a href="/menu/<%= menus[i]._id %>">
-            <img src=<%=menus[i].image %>/>
-          </a>
-          <% } %>
-      </div>
+    <div id="gallery">
+      <% menus.forEach(menu => { %>
+        <a href="/menu/<%= menu._id %>">
+          <img src=<%=menu.image %>/>
+        </a>
+        <h6>
+          <%= menu.name %>
+        </h6>
+        <% }) %>
     </div>
-    <!-- The expanding image container -->
-    <div class="container">
-      <!-- Close the image -->
-      <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-      <!-- Expanded image -->
-      <img id="expandedImg" style="width:100%">
-      <!-- Image text -->
-      <div id="imgtext"><%= menus.name %>
-
-      </div>
     </div>
-
-
-
-   
-   
-      
-      
-
-
   </main>
+  </br>
+  </br>
   <%- include('../partials/footer.ejs') %>
 </body>
-
 </html>

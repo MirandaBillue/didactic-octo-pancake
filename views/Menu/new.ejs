@@ -15,12 +15,14 @@
         <h1 id="newmenu">Add a menu item</h1>
     </header>
     <main>
-        <form action="/menu" method="POST">
-            <input type="text" name="name" />
+      <form action="/menu" method="POST">
+      Name: <input type="text" name="name" /><br />
+      Description:<input type="text" name="textarea" /><br />
+      Price: <input type="text" name="price"/><br />   
+      Image: <input type="file" name="img"/><br />        
             <input type="submit" value="Create New Menu Item" />
         </form>
     </main>
     <%- include('../partials/footer.ejs') %>
 </body>
-
 </html>

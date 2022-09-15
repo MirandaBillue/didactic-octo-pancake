@@ -12,17 +12,18 @@
 <body>
     <header>
       <%- include('../partials/nav.ejs') %>
-      
         <h1 id="blognew">Blog About Us!</h1>
-        <%- include('../partials/header.ejs') %>
     </header>
+    <br />
     <div class="container">
         <form id="blog" action="/blog" method="POST">
         Title: <input type="text" name="title" /><br />
-        Image: <input type="file" name="img"/><br />
-        Body:<input type="text" name="body" /><br />
-        <input type="submit" name="" value="Publish" />
+        Author: <input type="text" name="author" /><br />
+        Image: <input type="file" name="img"/><br /> <br /> <br />
+        Body:<input type="textarea" name="body" /><br /> <br />
+        <input type="submit" name="" value="Publish" /> <br />
     </form>
+    <br />
     </div>
     <%- include('../partials/footer.ejs') %>
 </body>

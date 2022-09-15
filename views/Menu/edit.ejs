@@ -12,12 +12,15 @@
 <body>
     <header>
       <%- include('../partials/nav.ejs') %>
-        <h1 id="medit">Edit <%= menu.name %></h1>
+        <h1 id="medit">Edit <%= menu.name %></h1><br />
     </header>
-            <form action="/menu/<%= menu._id %>?_method=PUT" method="POST">
-            <input type="text" name="name" value="<%= menu.name %>" /><br />
-            <input type="submit" value="Update Item" />
+            <form action="/menu/<%= menu._id %>?_method=PUT" method="POST"><br /><br />
+            Name:<input type="text" name="name" value="<%= menu.name %>" /><br /><br />
+            Description:<input type="text" name="description" value="<%= menu.description %>" /><br /><br />
+            Price:<input type="text" name="price" value="<%= menu.price %>" /><br /><br />
+            <input type="submit" value="Update Item" /><br /><br />
         </form>
+        <br />
         <%- include('../partials/footer.ejs') %>
 </body>
 

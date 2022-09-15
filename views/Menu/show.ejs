@@ -2,29 +2,34 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Chicle&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css" type="text/css"/>
-    <title>Sucré Menu</title>
+  <meta charset="utf-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Chicle&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css" type="text/css" />
+  <title>Sucré Menu</title>
 </head>
 
 <body id="mbshow">
-    <header>
-      <%- include('../partials/nav.ejs') %>
-    </header>
-   <div class="container">
-            <h1 id="showmenu"><%= menu.name %></h1>
-            <img src=<%= menu.image %></li>
-            <p id="pmenu">Description: <%= menu.description %></p>
-           <p id="pmenu">Price: $<%= menu.price %></p>
-           <form action="/menu/<%= menu._id %>?_method=DELETE" method="POST">
-            <input type="submit" value="Delete Item" />
-        </form>
-        <a href="/menu/<%= menu._id %>/edit">Edit Item</a>
-        <a href="/menu/new">Add New Item</a>
-        </div>
-        <%- include('../partials/footer.ejs') %>
+  <header>
+    <%- include('../partials/nav.ejs') %>
+  </header>
+  <div class="container">
+    <h1 id="showmenu">
+      <%= menu.name %>
+    </h1>
+    <img src=<%=menu.image %></li>
+    <p id="pmenu">Description: <%= menu.description %>
+    </p>
+    <p id="pmenu">Price: $<%= menu.price %>
+    </p>
+    <form action="/menu/<%= menu._id %>?_method=DELETE" method="POST">
+      <input class="btn btn-secondary btn-lg" type="submit" value="Delete Item" />
+    </form> <br />
+    <a href="/menu/<%= menu._id %>/edit" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Edit</a><br />
+    <a href="/menu/new" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Add New Item</a>
+  </div>
+  <%- include('../partials/footer.ejs') %>
 </body>
 
 </html>

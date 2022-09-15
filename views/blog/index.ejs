@@ -25,22 +25,27 @@
             </div>
           </nav>
     </header>
-    <main>
-        
+    <main>  
+      <div id="blogind">
+      <div class="bi_image">
         <img id="imageb" src="https://imgur.com/Zv34ON9l.jpg" alt="">
+      </div> 
+      <div class="blogtext">
         <p id="blogp">Welcome to our blog!  We will in general overlook that satisfaction doesn't originate from something we don't have, yet rather of perceiving and acknowledging what we do… Satisfaction is fellowship… Joy is festivity. It's tied in with acquiring bliss and praising life.
           Spreading bliss and commending each snapshot of life is the mantra at Sucré. Sucré started their endeavor with Handmade Chocolates and gradually moved into Cakes, Pastries, and unified items.
           Everything started with taking up little gathering requests. With the progression of time, we moved to counters in markets and now have 50 outlets in the city of Atlanta. Sucré develops with each passing day and connecting with individuals and adding to mind-blowing festivals.        
           In 2015 Sucré wandered into advancement and innovativeness and presented productive Birthday Cakes, Customized Wedding Cakes, and Theme Cakes according to events. Sucré expects to be the main Cake Store regarding quality, benefit, esteem for cash, and consumer loyalty.
-           </p>
-        <ul>
-            <% for(let i = 0; i < blogs.length; i++){ %>
-            <li>
-                <a href="/blog/<%=blogs[i]._id%>"><%= blogs[i].title %></a>
+        </p>
+      </div>
+      </div>
+      <ul>
+        <% blogs.forEach(blog => { %> 
+            <li>  <h4 class="card-title"> <a href="/blog/<%=blog._id%>"><%= blog.title %></a></h4>
+               <%= blog.createdAt.toLocaleDateString() %>
             </li>
-            <% } %>
-        </ul>
-    </main>
+        <% }) %> 
+      </ul> 
+      </main>
     <%- include('../partials/footer.ejs') %>
 </body>
 
