@@ -14,18 +14,26 @@
 <body>
 	<%- include('../partials/nav.ejs')  %>
 	<h1 id="register">Register</h1>
+	<p>Please fill in this form to create an account.</p>
 	<form id="reg" action='/users' method='POST'>
 		<label for="email">Email:</label>
-		<input type="email" name="email" id="email" />
-
+		<input type="text" name="email" id="email" />
+        </br>
 		<label for="password">Password:</label>
 		<input type="password" name="password" id="password" />
-
+	    </br>
 		<label for="name">Name:</label>
 		<input type="text" name="name" id="name" />
-
+	    </br>
+		<label for="address">Address:</label>
+		<input type="text" name="address" id="address" />
+	    </br>
+		<label for="telephone">Telephone:</label>
+		<input type="text" name="telephone" id="telephone" />
+	    </br>
 		<input type="submit" value="Register">
 	</form>
+</div>
 	<%- include('../partials/footer.ejs') %>
 </body>
 

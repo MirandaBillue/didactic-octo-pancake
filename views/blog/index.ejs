@@ -11,18 +11,13 @@
 
 <body>
     <header>
-      
+      <%- include('../partials/nav.ejs') %>
       <h1 id="blogindex">the SUCRÉ blog</h1>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">SUCRÉ</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-toggle="navbar-nav" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-nav" id="navbarNav">
               <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="/">HOME</a>
-                </li>
                 <li class="nav-item">
                   <a class="nav-link" href="/blog/new">ADD A BLOG</a>
                 </li>
