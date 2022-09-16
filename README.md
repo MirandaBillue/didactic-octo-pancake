@@ -1,6 +1,16 @@
 # SUCRÉ
 I created this app to showcase my passion for baking and all things sweet. This  store is for the lover of sweet confections who enjoys an easy ordering experience.Sucré (Sugar) allows customers to view and order some of their favorite sweets!  There is also a blog where customers and visitors can blog about their experience with us!
 
+## Table of Contents
+* https://github.com/MirandaBillue/sucre-10/edit/main/README.md#technologies-used
+* [Screenshots](https://github.com/MirandaBillue/sucre-10/edit/main/README.md#screenshots)
+* [Trello Planning]
+* [WireFrame]
+* [Getting Started]
+* [Next Steps]
+* [Works Cited]
+
+
 ## Technologies Used:
 * HTML5
 * CSS
