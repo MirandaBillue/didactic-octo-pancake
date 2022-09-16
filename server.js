@@ -10,6 +10,7 @@ const blogController = require('./controllers/blog.js');
 const session = require('express-session');
 const userController = require('./controllers/users');
 const sessionsController = require('./controllers/sessions');
+const cartController = require('./controllers/cart');
 
 ///Port
 const PORT = process.env.PORT || 3000;
@@ -41,6 +42,7 @@ app.use('/menu', menuController);
 app.use('/blog', blogController);
 app.use('/users', userController);
 app.use('/sessions', sessionsController);
+app.use('/cart', cartController);
 
 app.get('/', (req, res) => {
   if (req.session.currentUser) {

@@ -23,10 +23,21 @@
     </p>
     <p id="pmenu">Price: $<%= menu.price %>
     </p>
+    <form action="/cart" method="POST">
+      <span class="price">
+        <%= menu.formattedPrice %>
+      </span>
+      <span class="qty-minus"></span>
+      <input type="number" name="qty" class="qty" value="1">
+      <span class="qty-plus"></span>
+      <input type="hidden" name="menu_id" value="<%= menu.menu_id %>">
+      <input type="submit" class="btn btn-secondary btn-lg active" value="Add to Cart" />
+    </form>
     <form action="/menu/<%= menu._id %>?_method=DELETE" method="POST">
       <input class="btn btn-secondary btn-lg" type="submit" value="Delete Item" />
     </form> <br />
-    <a href="/menu/<%= menu._id %>/edit" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Edit</a><br />
+    <a href="/menu/<%= menu._id %>/edit" class="btn btn-secondary btn-lg active" role="button"
+      aria-pressed="true">Edit</a><br />
     <a href="/menu/new" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Add New Item</a>
   </div>
   <%- include('../partials/footer.ejs') %>

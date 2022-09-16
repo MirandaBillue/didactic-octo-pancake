@@ -61,7 +61,7 @@
 
 .cafe-inner {
     font-size: 200px;
-    color: rgb(250, 229, 233);
+    color: rgb(251, 251, 251);
     animation:
         text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
@@ -278,10 +278,6 @@ input[type=password]:focus {
     color: rgb(75, 73, 73);
     font-size: 19px;
     padding-left: 10px;
-}
-
-.blogfooter {
-    position: absolute;  
 }
 
 #blogindex {
