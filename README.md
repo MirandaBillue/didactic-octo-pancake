@@ -33,7 +33,7 @@ https://trello.com/invite/b/TGTRLZAH/45081c709dbce50558ae55ada1debfcc/project-2
 
 ## Getting Started
 * https://github.com/MirandaBillue/sucre-10
-* https://git.heroku.com/sucre-10.git
+*  https://sucre-10.herokuapp.com/
 
 ## Next Steps
 * Admin users will be able to have access to the add, edit and delete functions on the application.
