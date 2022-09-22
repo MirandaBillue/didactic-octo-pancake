@@ -1,8 +1,8 @@
 ///Dependencies
-const express = require('express');
-const router = express.Router();
+const express = require('express')
+const router = express.Router()
 const Menu = require('../models/menu')
-const User = require('../models/user.js');
+const User = require('../models/user.js')
 
 ///Routers
 ///Index
